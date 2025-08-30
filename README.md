@@ -17,7 +17,7 @@ Clone the repository:
 git clone git@github.com:iragsraghu/go-book-management.git
 cd go-book-management
 docker build -t go-book-management .
-docker run -p 8080:8080 --env-file .env go-book-management
+docker run -p 8080:8080 --env-file .env -e DOCKER_ENV=true go-book-management
 ```
 
 ## Access the Application

@@ -19,14 +19,8 @@ COPY go.mod go.sum ./
 # Download dependencies
 RUN go mod download
 
-# Install swag for Swagger generation
-RUN go install github.com/swaggo/swag/cmd/swag@latest
-
 # Copy whole project
 COPY . . 
-
-# Generate Swagger docs (this will create ./docs)
-RUN swag init -g main.go -o ./docs
 
 # Build the Go app
 RUN go build -o main
