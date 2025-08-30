@@ -27,7 +27,7 @@ func ConnectDatabase() {
 	port := os.Getenv("DB_PORT")
 	dbName := os.Getenv("DB_NAME")
 
-	if host == "localhost" {
+	if os.Getenv("DOCKER_ENV") == "true" {
 		host = "host.docker.internal"
 		fmt.Println("Host is running in docker")
 	}
