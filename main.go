@@ -21,6 +21,7 @@ import (
 // @description This is a simple CRUD API with Gin and GORM
 // @host localhost:8080
 // @BasePath /
+
 func main() {
 	r := gin.Default()
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
