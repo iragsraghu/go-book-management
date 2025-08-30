@@ -3,11 +3,10 @@
 This project is a simple **CRUD (Create, Read, Update, Delete) API** built using **Go (Golang)**.  
 It includes endpoints to manage items and provides **Swagger API documentation**.  
 
-## Technologies Used
-- **Go (Golang)** – Backend API  
-- **Gin Framework** – HTTP web framework  
-- **Swagger** – API documentation  
-- **Docker** – Containerization  
+## 🚀 Prerequisites
+- [Go](https://go.dev/dl/) installed
+- [Docker](https://docs.docker.com/get-docker/) installed
+- [swag](https://github.com/swaggo/swag) installed for Swagger generation
 
 ## Running the Application
 
@@ -15,9 +14,18 @@ Clone the repository:
 
 ```bash
 git clone git@github.com:iragsraghu/go-book-management.git
+
 cd go-book-management
-docker build -t go-book-management .
-docker run -p 8080:8080 --env-file .env -e DOCKER_ENV=true go-book-management
+
+## Generate Swagger, Build, and Run in one step:
+make all
+
+or 
+
+## Run individually:
+make swagger       # Generate Swagger docs
+make docker-build  # Build Docker image
+make docker-run    # Run Docker container
 ```
 
 ## Access the Application
